@@ -1,0 +1,10 @@
+settings:
+  docker:
+    parent_image: zenmldocker/zenml:latest
+    skip_build: True
+  orchestrator.sagemaker:
+    synchronous: false
+    
+parameters:
+  author_full_names:
+    - Eric Fernald
