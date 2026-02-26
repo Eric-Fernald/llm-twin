@@ -20,7 +20,6 @@ def chunk_text(text: str, chunk_size: int = 500, chunk_overlap: int = 50) -> lis
 def chunk_document(text: str, min_length: int, max_length: int) -> list[str]:
     return chunk_article(text, min_length, max_length)
 
-
 def chunk_article(text: str, min_length: int, max_length: int) -> list[str]:
     sentences = re.split(r"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s", text)
     extracts = []
@@ -36,8 +35,6 @@ def chunk_article(text: str, min_length: int, max_length: int) -> list[str]:
             if len(current_chunk) >= min_length:
                 extracts.append(current_chunk.strip())
             current_chunk = sentence + " "
-
     if len(current_chunk) >= min_length:
         extracts.append(current_chunk.strip())
-
     return extracts
