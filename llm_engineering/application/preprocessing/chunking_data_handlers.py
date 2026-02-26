@@ -25,7 +25,6 @@ class ChunkingDataHandler(ABC, Generic[CleanedDocumentT, ChunkT]):
     def chunk(self, data_model: CleanedDocumentT) -> list[ChunkT]:
         pass
 
-
 class PostChunkingHandler(ChunkingDataHandler):
     @property
     def metadata(self) -> dict:
