@@ -175,3 +175,8 @@ run_ids.txt
 # Virtual environments
 *_venv
 *_myenv
+
+# Claude files
+.claude
+.claude\settings.local.json
+CLAUDE.md
